@@ -1,0 +1,19 @@
+<!--Navigation bar to link to all the pages. Link is via routerLink -->
+<div class="container">
+  <div class="row">
+      <nav>
+        <ul>
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['movie']">Movies</a></li>
+          <li><a [routerLink]="['game']">Game</a></li>
+          <li><a [routerLink]="['joke']">Joke</a></li>
+        </ul>
+      </nav>
+  </div>
+</div>
+
+<!--Section for main content. The content fron selected component
+from the nav bar will show here-->
+<section id="main">
+  <router-outlet></router-outlet>
+</section>

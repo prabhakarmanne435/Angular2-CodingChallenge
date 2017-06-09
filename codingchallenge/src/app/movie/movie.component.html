@@ -1,0 +1,54 @@
+<!-- Details of movie -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <ul>
+      <div class="movie">
+        <li><label>Adult: </label>{{ movies.adult }}</li>
+        <li><label>Backdrop Path: </label>{{ movies.backdrop_path }}</li>
+        <li><label>Any collection it belongs to? </label>
+          {{ movies.belongs_to_collection }}</li>
+        <li><label>Budget: </label>{{ movies.budget }}</li>
+        <li><label>Genres: </label><br>
+          <div *ngFor="let x of movies.genres">
+            ID: {{ x.id }}    Name: {{ x.name }}
+          </div>
+        </li>
+        <li><label>Homepage: </label><a href="{{ movies.homepage }}"
+          target="_blank">{{ movies.homepage }}</a></li>
+        <li><label>ID: </label>{{ movies.id }}</li>
+        <li><label>IMDB ID: </label>{{ movies.imdb_id }}</li>
+        <li><label>Original Language:</label>{{ movies.original_language }}</li>
+        <li><label>Original Title: </label>{{ movies.original_title }}</li>
+        <li><label>Overview: </label>{{ movies.overview }}</li>
+        <li><label>Popularity: </label>{{ movies.popularity }}</li>
+        <li><label>Poster Path: </label>{{ movies.poster_path }}</li>
+        <li><label>Production Companies: </label><br>
+          <div *ngFor="let x of movies.production_companies">
+            Name: {{ x.name }}    ID: {{ x.id }}
+          </div>
+        </li>
+        <li><label>Production Countries: </label><br>
+          <div *ngFor="let x of movies.production_countries">
+            Countries: {{ x.iso_3166_1 }}    Name: {{ x.name }}
+          </div>
+        </li>
+        <li><label>Release Date: </label>{{ movies.release_date }}</li>
+        <li><label>Revenue: </label>{{ movies.revenue }}</li>
+        <li><label> Runtime(in minutes): </label>{{ movies.runtime }}</li>
+        <li><label>Spoken Languages: </label><br>
+          <div *ngFor="let x of movies.spoken_languages">
+            Languages: {{ x.iso_639_1 }}    Name: {{ x.name }}
+          </div>
+        </li>
+        <li><label>Status: </label>{{ movies.status }}</li>
+        <li><label>Tagline: </label>{{ movies.tagline }}</li>
+        <li><label>Title: </label>{{ movies.title }}</li>
+        <li><label>Video available: </label>{{ movies.video }}</li>
+        <li><label>Average Votes: </label>{{ movies.vote_average }}</li>
+        <li><label>Vote Count: </label>{{ movies.vote_count }}</li>
+      </div>
+    </ul>
+  </div>
+  </div>
+</div>

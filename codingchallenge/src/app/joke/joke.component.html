@@ -1,0 +1,21 @@
+<div class="container">
+  <!--Div for User Input and Refresh Button -->
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <input #jokes (keyup)="displayJokes(jokes.value)">
+      <button (click)="displayJokes(jokes.value)">Refresh Jokes!</button>
+    </div>
+  </div>
+  <!-- div to show the result i.e. jokes -->
+  <div class="row">
+    <div class="col-md-12">
+      <ol>
+       <div *ngFor="let x of joke.value">
+         <li>
+           ID: {{ x.id }}  <br>  Joke: {{ x.joke }}
+         </li>
+       </div>
+      </ol>
+    </div>
+  </div>
+</div>
